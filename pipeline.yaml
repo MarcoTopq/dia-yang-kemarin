@@ -1,0 +1,21 @@
+# Workspace dashboard pipeline untuk Dia yang Kemarin.
+# Root workspace adalah folder repo ini sendiri (path: .).
+key: KMR
+name: Dia yang Kemarin
+repos:
+  app:
+    path: .
+    test: "flutter test"
+    target_branch: main
+    # Dijalankan sekali di setiap worktree task baru.
+    setup: "flutter pub get"
+git:
+  # Remote origin ada di GitHub, yang belum didukung untuk merge request:
+  # branch task (KMR-<n>-...) di-push ke origin tanpa MR dan tanpa pembacaan CI.
+  # main tidak pernah di-push oleh dashboard.
+  host: none
+# Hemat token saat mencoba; hapus baris model untuk memakai model default.
+stages:
+  - { id: plan, model: haiku }
+  - { id: implement, model: sonnet }
+  - { id: verify, model: haiku }

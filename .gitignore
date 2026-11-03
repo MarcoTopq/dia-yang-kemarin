@@ -46,3 +46,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Dashboard pipeline: file konteks per run, ditulis ulang setiap run
+/docs/items/
