@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dart --version)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\([p['rootUri'] for p in d['packages'] if p['name']=='sqlite3'][0]\\)\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\([p['rootUri'] for p in d['packages'] if p['name']=='sqlcipher_flutter_libs'][0]\\)\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\([p['rootUri'] for p in d['packages'] if p['name']=='drift'][0]\\)\")",
+      "Bash(flutter test *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\muhamad.rizal\\.claude\\projects\\c--Users-muhamad-rizal-OneDrive---Lembaga-Penjamin-Simpanan-Documents-Dia-yang-kemarin\\memory"
+    ]
+  }
+}
